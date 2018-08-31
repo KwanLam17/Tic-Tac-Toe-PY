@@ -7,8 +7,15 @@ def player_input():
     while (marker != 'X') and (marker != 'O'):
         marker = input("Please pick a marker 'X' or 'O': ")
 
+def place_marker(board, marker, position):
+    board[position] = marker
+
+# -------- TESTS -----------
+
 test_board = ['#','X','O','X','O','X','O','X','O','X']
+#display_board(test_board)
+#player1 = player_input()
+place_marker(test_board, '$', 8)
 display_board(test_board)
 
-player1 = player_input()
 
