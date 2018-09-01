@@ -97,8 +97,11 @@ while(True):
         if win_check(board, markers[cur_player - 1]):
             print(f"Player {cur_player} wins!")
             break
-        else:
-            cur_player = int(not cur_player)
+        else: 
+            if cur_player == 2:
+                cur_player = 1
+            else:
+                cur_player = 2
         
     if(not replay()):
         break
